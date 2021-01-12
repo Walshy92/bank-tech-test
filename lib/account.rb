@@ -1,0 +1,16 @@
+class Account
+  attr_accessor :balance
+
+  def initialize
+    @balance = 0
+  end
+
+  def deposit(amount)
+    @balance += amount
+  end
+
+  def withdraw(amount)
+    raise 'Insufficient funds' if @balance - amount < 0 
+    @balance -= amount
+  end
+end

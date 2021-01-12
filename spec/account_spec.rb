@@ -28,9 +28,9 @@ describe Account do
       account.deposit(50)
       account.withdraw(30)
       account.statement
-      expect { print('Date made || Deposit || Withdrawl || Balance
-12/01/2021 || 0.00 || 30.00 || 20.00
-12/01/2021 || 50.00 || 0.00 || 50.00') }.to output.to_stdout
+      expect { print('Date made || Deposit || Withdrawl || Balance' +
+      Date.today.to_s + '|| 0.00 || 30.00 || 20.00' +
+      Date.today.to_s + '|| 50.00 || 0.00 || 50.00') }.to output.to_stdout
     end
   end
 end
